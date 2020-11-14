@@ -20,8 +20,11 @@ export const VisitPlace = () => {
   }, [!citiesAPI.loading]);
 
   return (
-    <section>
-      <h2 className='mb-4 mt-2'>
+    <section
+      id='widget-cities'
+      className='widget-cities animate__animated animate__slow animate__fadeInRight'
+    >
+      <h2 className='mb-3 mt-4 title-section'>
         PLACE TO <span>VISIT</span>
       </h2>
       {!citiesAPI.loading && (

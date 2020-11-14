@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from 'react';
 
 export const useFetch = (requestFunc) => {
   const [state, setState] = useState({
@@ -22,7 +22,7 @@ export const useFetch = (requestFunc) => {
         setState({
           data: null,
           loading: false,
-          error: "No se pudo cargar la info",
+          error: 'No se pudo cargar la info',
         });
       });
   }, [requestFunc]);

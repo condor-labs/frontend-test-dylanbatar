@@ -1,0 +1,48 @@
+.widget-favorite {
+  .widget-card {
+    margin-bottom: 0.8rem;
+    width: 100%;
+    @media (min-width: 910px) {
+      width: 440px;
+    }
+    .widget-card-wrapper {
+      display: flex;
+      padding: 1rem 1rem;
+    }
+    .widget-card-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+      }
+    }
+    .content {
+      margin-right: 2rem;
+      margin-left: 0.3rem;
+      i {
+        color: var(--purple);
+      }
+      @media (min-width: 768px) {
+        margin-left: 2rem;
+      }
+      .widget-headquarter-name {
+        color: var(--purple) !important;
+        margin-bottom: 0.2rem;
+        font-size: 15px;
+      }
+      .widget-headquarter-desc {
+        color: var(--medium) !important;
+        font-weight: 100;
+      }
+      .badges {
+        display: flex;
+        color: var(--medium);
+        margin: 1rem 0;
+        font-size: 13px;
+      }
+    }
+  }
+}

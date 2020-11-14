@@ -3,7 +3,7 @@ import './cardCity.scss';
 
 export const CardCity = ({ city, image }) => {
   return (
-    <div className='widget-card' id='widget-cities'>
+    <div className='widget-card'>
       <div className='widget-card-image'>
         <img className='' src={image} alt='city' />
       </div>

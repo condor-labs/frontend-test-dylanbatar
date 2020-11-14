@@ -1,0 +1,18 @@
+.widget-suggest {
+  @media (min-width: 768px) {
+    width: 400px;
+  }
+  height: 170px;
+  .wrapper-card {
+    padding: 1.5rem;
+    text-transform: uppercase;
+  }
+  .footer-card {
+    display: flex;
+    justify-content: space-between;
+    .badges {
+      display: flex;
+      text-transform: lowercase;
+    }
+  }
+}

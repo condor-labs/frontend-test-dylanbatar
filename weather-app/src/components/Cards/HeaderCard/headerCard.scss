@@ -5,11 +5,13 @@
 .container-card {
   position: relative;
   color: var(--white);
+  border-radius: 2rem;
+
   .leading-icon {
     position: absolute;
     z-index: 1;
     right: 0;
-    top: 5px;
+    top: -4px;
   }
 
   .widget-header {

@@ -1,3 +1,4 @@
+import { FavoritePlaces } from './components/Sections/FavoritePlaces/FavoritePlaces';
 import { Header } from './components/Sections/Header/Header';
 import { Slide } from './components/Sections/Slide/Slide';
 import { Suggets } from './components/Sections/Suggets/Suggets';
@@ -8,11 +9,10 @@ const WeatherApp = () => {
   return (
     <div>
       <Header />
-      {/* <section>
-        <Slide />
-      </section>
-      <Suggets /> */}
+      <Slide />
+      <FavoritePlaces />
       <VisitPlace />
+      <Suggets />
     </div>
   );
 };
