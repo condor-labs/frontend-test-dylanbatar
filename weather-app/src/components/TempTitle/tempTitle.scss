@@ -1,0 +1,9 @@
+.temp-title {
+  font-size: 35px;
+  color: var(--white);
+  font-weight: 200;
+  margin-bottom: 0 !important;
+  @media (min-width: 768px) {
+    font-size: 75px;
+  }
+}

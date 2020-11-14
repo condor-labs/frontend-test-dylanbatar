@@ -1,0 +1,48 @@
+.card-border {
+  border-radius: 2rem;
+}
+
+.container-card {
+  position: relative;
+  color: var(--white);
+  .leading-icon {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 5px;
+  }
+
+  .widget-header {
+    position: relative;
+
+    .widget-header-image {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 400px;
+      object-fit: cover !important;
+    }
+  }
+
+  .widget-content {
+    padding: 3rem;
+
+    .widget-content-badges {
+      display: flex;
+    }
+
+    .widget-message-date {
+      font-size: 30px;
+    }
+
+    .condor-text {
+      font-weight: 600;
+    }
+
+    @media (min-width: 768px) {
+      .widget-message-date {
+        font-size: 40px;
+      }
+    }
+  }
+}

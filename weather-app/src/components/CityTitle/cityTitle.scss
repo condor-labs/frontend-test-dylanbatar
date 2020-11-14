@@ -1,0 +1,16 @@
+.widget-headquarter {
+  display: inline-flex;
+  align-items: center;
+  font-size: 20px;
+  color: var(--white);
+  i {
+    font-size: 15px;
+    margin-right: 10px;
+  }
+}
+
+.purple-background {
+  background-color: var(--purple);
+  border-radius: 2rem;
+  padding: 4px 15px;
+}
