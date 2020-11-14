@@ -1,0 +1,44 @@
+.widget-card {
+  border-radius: 2rem;
+  height: 200px;
+  overflow: hidden;
+  width: 180px;
+  position: relative;
+  .widget-card-image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+
+  .widget-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 180px;
+    padding: 1rem 1rem 0rem 1rem;
+    .widget-city-name {
+      text-align: right;
+      color: var(--white);
+    }
+
+    .visit-button {
+      color: var(--white);
+      text-decoration: none;
+      text-align: center;
+      background-color: var(--purple);
+      padding: 0.5rem;
+      border-radius: 2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 10px;
+    }
+  }
+}

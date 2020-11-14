@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { HeaderCard } from "../../Cards/HeaderCard/HeaderCard";
-import { getVenues } from "../../../api/venues";
-import { useFetch } from "../../../hooks/useFetch";
-import { filterMainHeadquarter } from "../../../utils/filterMainHeadquarter";
+import React, { useEffect, useState } from 'react';
+import { HeaderCard } from '../../Cards/HeaderCard/HeaderCard';
+import { getVenues } from '../../../api/venues';
+import { useFetch } from '../../../hooks/useFetch';
+import { filterMainHeadquarter } from '../../../utils/filters';
 
 export const Header = () => {
   const venueAPI = useFetch(getVenues);
