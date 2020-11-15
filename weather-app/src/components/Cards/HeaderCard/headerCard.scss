@@ -1,5 +1,9 @@
 .card-border {
   border-radius: 2rem;
+  @media (max-width: 475px) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 }
 
 .container-card {

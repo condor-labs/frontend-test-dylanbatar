@@ -4,6 +4,7 @@ import { getVenues } from '../../../api/venues';
 import { useFetch } from '../../../hooks/useFetch';
 import { filterMainHeadquarter } from '../../../utils/filters';
 import { saveVenues } from '../../../utils/store';
+import { Loading } from '../../Loading/Loading';
 
 export const Header = () => {
   const venueAPI = useFetch(getVenues);
@@ -21,7 +22,7 @@ export const Header = () => {
 
   return (
     <header>
-      {!venueAPI.loading && (
+      {!venueAPI.loading ? (
         <HeaderCard
           city={mainHeadquarter?.name}
           temp={mainHeadquarter?.main.temp}
@@ -31,6 +32,8 @@ export const Header = () => {
           image={mainHeadquarter?.image}
           date={mainHeadquarter?.date}
         />
+      ) : (
+        <Loading />
       )}
     </header>
   );

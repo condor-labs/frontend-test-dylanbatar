@@ -1,0 +1,17 @@
+.loading {
+  min-height: 200px;
+  max-height: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .fa-spinner {
+    animation: spin 4s linear infinite;
+    font-size: 40px;
+  }
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

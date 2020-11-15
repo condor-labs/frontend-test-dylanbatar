@@ -23,9 +23,13 @@
         outline: none;
         margin: 0.3rem;
         width: 40px;
+        transition: ease-in 0.2s;
+
         &:hover {
           background-color: var(--purple);
           color: var(--white);
+          transition: ease-in 0.3s;
+          cursor: pointer;
         }
       }
     }
