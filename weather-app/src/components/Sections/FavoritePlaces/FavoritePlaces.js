@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { getVenues } from '../../../api/venues';
+import { filterMainHeadquarter } from '../../../utils/filters';
 import { LargeCard } from '../../Cards/LargeCard/LargeCard';
 import './favoritePlaces.scss';
 
 export const FavoritePlaces = () => {
+  const [venues, setVenues] = useState([]);
+
+  const loadVenues = async () => {
+    const response = await getVenues();
+    const otherVenues = filterMainHeadquarter(response.places, false);
+    setVenues(otherVenues);
+  };
+
+  useEffect(() => {
+    loadVenues();
+  }, []);
+
   return (
     <section
       id='widget-favorite'
@@ -12,28 +26,19 @@ export const FavoritePlaces = () => {
         Our favorite <span>places</span>
       </h2>
       <div className='favorite-list'>
-        <LargeCard
-          city='cartagena - co'
-          desc='kiren giren kira gon gon es el amo'
-          temp={298}
-          humidity={4}
-          icon={'cloudy'}
-          windSpeed={4.2}
-          image={
-            'https://images.unsplash.com/photo-1563668454696-170e01768e54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
-          }
-        />
-        <LargeCard
-          city='cartagena - co'
-          temp={298}
-          desc='kiren giren kira gon gon es el amo'
-          humidity={4}
-          icon={'cloudy'}
-          windSpeed={4.2}
-          image={
-            'https://images.unsplash.com/photo-1563668454696-170e01768e54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
-          }
-        />
+        {venues.length > 0 &&
+          venues.map((venue) => (
+            <LargeCard
+              key={venue.id}
+              city={`${venue?.name} - ${venue?.sys.country}`}
+              desc={venue?.description}
+              temp={venue?.main.temp}
+              humidity={venue?.main.humidity}
+              icon={venue?.weather[0].icon}
+              windSpeed={venue?.wind.speed}
+              image={venue?.image}
+            />
+          ))}
       </div>
     </section>
   );

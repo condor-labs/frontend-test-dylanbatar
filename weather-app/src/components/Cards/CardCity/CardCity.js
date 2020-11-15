@@ -9,7 +9,11 @@ export const CardCity = ({ city, image }) => {
       </div>
       <div className='widget-card-content'>
         <p className='widget-city-name'>{city}</p>
-        <a href='' target='_blank' className='visit-button'>
+        <a
+          href='https://condorlabs.io/'
+          target='_blank'
+          className='visit-button'
+        >
           Visit place
         </a>
       </div>

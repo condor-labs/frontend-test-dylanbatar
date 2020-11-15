@@ -36,6 +36,10 @@
       .widget-headquarter-desc {
         color: var(--medium) !important;
         font-weight: 100;
+        white-space: nowrap;
+        width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .badges {
         display: flex;

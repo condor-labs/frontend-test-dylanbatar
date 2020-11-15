@@ -1,5 +1,4 @@
 import React from 'react';
-import { colors } from '../../../settings/colors';
 import { WeatherIcon } from '../../WeatherIcon/WeatherIcon';
 
 export const ContainerCard = ({

@@ -1,5 +1,6 @@
 import React from 'react';
 import { colors } from '../../../settings/colors';
+import { kelvinToCelsius } from '../../../utils/weatherAndDates';
 import { Badge } from '../../Badge/Badge';
 import { CityTitle } from '../../CityTitle/CityTitle';
 import { ContainerCard } from '../ContainerCard/ContainerCard';
@@ -33,7 +34,7 @@ export const LargeCard = ({
             <div className='badges'>
               <Badge
                 className='widget-temperature'
-                title={temp + '° C'}
+                title={kelvinToCelsius(temp) + '° C'}
                 color={colors.yellow}
               />
               <Badge

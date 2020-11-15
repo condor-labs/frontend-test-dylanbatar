@@ -1,17 +1,15 @@
 import { kelvinToCelsius } from './weatherAndDates';
 
-export const filterMainHeadquarter = (venues = []) => {
-  return venues.filter((venue) => venue.main_headquarter === true);
+export const filterMainHeadquarter = (venues = [], main = true) => {
+  return venues.filter((venue) => venue.main_headquarter === main);
 };
 
 export const suggestCities = (cities = []) => {
-  return cities.filter((city) => {
-    if (
+  return cities.filter(
+    (city) =>
       kelvinToCelsius(city.main.temp) >= 24 &&
       kelvinToCelsius(city.main.temp) <= 30
-    )
-      return city;
-  });
+  );
 };
 
 export const suggestDay = (days = []) => {

@@ -3,13 +3,15 @@ import { HeaderCard } from '../../Cards/HeaderCard/HeaderCard';
 import { getVenues } from '../../../api/venues';
 import { useFetch } from '../../../hooks/useFetch';
 import { filterMainHeadquarter } from '../../../utils/filters';
+import { saveVenues } from '../../../utils/store';
 
 export const Header = () => {
   const venueAPI = useFetch(getVenues);
   const [mainHeadquarter, setMainHeadquarter] = useState({});
 
   const getMainVanue = async () => {
-    const [main] = filterMainHeadquarter(venueAPI.data?.places);
+    saveVenues(venueAPI.data?.places);
+    const [main] = filterMainHeadquarter(venueAPI.data?.places, true);
     setMainHeadquarter(main);
   };
 
